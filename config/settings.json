@@ -1,0 +1,8 @@
+{
+  "default": {
+    "users": [
+        {"name": "ФИО1", "email": "email1@mail.com"},
+        {"name": "ФИО2", "email": "email2@mail.com"}
+      ]
+  }
+}

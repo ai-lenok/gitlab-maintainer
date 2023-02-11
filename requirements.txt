@@ -1,0 +1,6 @@
+jproperties
+requests
+
+pydantic
+PyYAML
+dynaconf[all]
