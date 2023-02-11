@@ -5,7 +5,7 @@ Script for creating private repos by template (import_url)
 ## Install requirements
 
 ```shell
-pip3 install -r /path/to/requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Run
