@@ -67,7 +67,7 @@ class GitLabMaintainer:
         self.logger.info(res.json())
 
     def invite(self, repo_id: int, email: str):
-        self.logger.info(f"Invite: {repo_id} to {email}")
+        self.logger.info(f"Invite: repo_id: {repo_id} to email: {email}")
         data = {
             "email": email,
             "access_level": self.access_level,
