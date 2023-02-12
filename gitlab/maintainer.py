@@ -1,5 +1,4 @@
 import requests
-import re
 import logging
 from dynaconf import settings
 
