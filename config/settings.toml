@@ -2,9 +2,9 @@
 auth_token = "TOKEN"
 host = "https://GIT_LAB_URL"
 namespace_id = 0
-template_url = "https://GIT_LAB_URL/public/mars-rover.git"
+template_url = "https://GIT_LAB_URL/public/repo.git"
 expires_invite = "2024-01-01"
-access_level = 30 # Developer
+access_level = 30 # Developer=30 Maintainer=40
 
 log_level = 20 # DEBUG=10 INFO=20 WARNING=30 ERROR=40 CRITICAL=50
 log_format = "%(asctime)s - [%(levelname)s] - (%(filename)s).%(funcName)s(%(lineno)d) - %(message)s"
