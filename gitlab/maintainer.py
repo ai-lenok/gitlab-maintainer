@@ -19,6 +19,7 @@ class GitLabMaintainer:
         self.access_level = settings["access_level"]
         self.maintainer_level = 40
         self.namespace_id = settings["namespace_id"]
+        self.postfix_repo_name = settings["postfix_repo_name"]
 
         self.users = {}
         for u in settings["users"]:
@@ -34,13 +35,12 @@ class GitLabMaintainer:
         res = requests.get(f"{self.host_projects}/{repo_id}", headers=self.header)
         self.logger.info(res.json())
 
-    def create_repo(self, name: str, email: str):
-        path_email = re.sub(r"[@.]", "-", email)
-        self.logger.info(f"Create repo: {path_email}")
+    def create_repo(self, repo_name: str, repo_path: str):
+        self.logger.info(f"Create repo: {repo_path}")
         data = {
-            "name": f"{name}",
-            "path": f"{path_email}",
-            "description": f"{name}: Решение олимпиадной задачи",
+            "name": f"{repo_name}",
+            "path": f"{repo_path}",
+            "description": f"{repo_name}{self.postfix_repo_name}",
             "namespace_id": self.namespace_id,
             "import_url": self.template_url
         }

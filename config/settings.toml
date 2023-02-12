@@ -5,6 +5,7 @@ namespace_id = 0
 template_url = "https://GIT_LAB_URL/public/repo.git"
 expires_invite = "2024-01-01"
 access_level = 30 # Developer=30 Maintainer=40
+postfix_repo_name = ": Решение олимпиадной задачи"
 
 log_level = 20 # DEBUG=10 INFO=20 WARNING=30 ERROR=40 CRITICAL=50
 log_format = "%(asctime)s - [%(levelname)s] - (%(filename)s).%(funcName)s(%(lineno)d) - %(message)s"
