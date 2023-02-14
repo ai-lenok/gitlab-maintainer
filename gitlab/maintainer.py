@@ -5,9 +5,15 @@ from dynaconf import settings
 
 class GitLabMaintainer:
     def __init__(self):
+        log_formatter = logging.Formatter(settings["log_format"])
         logging.basicConfig(level=settings["log_level"],
                             format=settings["log_format"])
         self.logger = logging.getLogger('GitLabMaintainer')
+        if settings["need_log_to_file"]:
+            file_handler = logging.FileHandler(settings["log_file"])
+            file_handler.setFormatter(log_formatter)
+            self.logger.addHandler(file_handler)
+
         self.host = settings["host"]
         self.host_projects = f'{settings["host"]}/api/v4/projects'
         self.host_users = f'{settings["host"]}/api/v4/users'
