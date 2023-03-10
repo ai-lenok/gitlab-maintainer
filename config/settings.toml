@@ -11,3 +11,11 @@ log_level = 20 # DEBUG=10 INFO=20 WARNING=30 ERROR=40 CRITICAL=50
 log_format = "%(asctime)s - [%(levelname)s] - (%(filename)s).%(funcName)s(%(lineno)d) - %(message)s"
 log_file = "output.log"
 need_log_to_file = false
+
+dir_repos = "."
+start_repo_id = 1
+end_repo_id = 2
+
+path_to_map_validator = "JAR"
+dir_maps = ""
+map_results = ""
